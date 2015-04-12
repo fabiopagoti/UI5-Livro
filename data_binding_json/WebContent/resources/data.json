@@ -1,0 +1,47 @@
+{
+    "name": "Fabio",
+    "last_name": "Pagoti",
+    "age": 25,
+    "birthday": "19890727",
+    "grade": "7.2375",
+    "address":
+    {
+        "edit": false,
+        "street":
+        {
+            "name": "Av Paulista",
+            "number": 20000
+        },
+        "city": "São Paulo",
+        "state": "SP"
+    },
+    "skills": ["ui5", "hana", "abap"],
+    "fan_of": [
+    {
+        "name": "Pele",
+        "job": "Former soccer player"
+    },
+    {
+        "name": "Allen Iverson",
+        "job": "Basketball player"
+    },
+    {
+        "name": "Jason Mraz",
+        "job": "Singer"
+    },
+    {
+        "name": "Jorge Drexler",
+        "job": "Singer"
+    }],
+    "social": [
+    {
+        "type": "Link",
+        "name": "Twitter",
+        "value": "//twitter.com/fabiopagoti"
+    },
+    {
+        "type": "TextView",
+        "name": "GitHub",
+        "value": "//github.com/fabiopagoti"
+    }]
+}

@@ -1,0 +1,381 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		
+		<title>Data Binding</title>
+		<script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.ui.commons"
+				data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-xx-bindingSyntax="complex">
+		</script>
+		<!-- add sap.ui.table,sap.ui.ux3 and/or other libraries to 'data-sap-ui-libs' if required -->
+
+		<script>
+	
+			// Neste primeiro exemplo, nosso modelo não virá de um back end mas sim de um objeto Javascript
+			var obj = {
+				name: "Fabio",
+				last_name: "Pagoti",
+				age: 25,
+				birthday: "19890727",
+				grade: "7.2375",
+				address: {
+					edit: true,
+					street: {
+						name: "Av Paulista",
+						number: 20000,
+					},
+					city: "São Paulo",
+					state: "SP"
+				},
+				skills: ["ui5", "hana", "abap"],
+				fan_of: [
+				{
+					name: "Pele",
+					job: "Former soccer player"
+				},
+				{
+					name: "Allen Iverson",
+					job: "Basketball player"
+				},
+				{
+					name: "Jason Mraz",
+					job: "Singer"
+				},
+				{
+					name: "Jorge Drexler",
+					job: "Singer"
+				}
+				],
+				social: [
+				{
+					type: "Link",
+					name: "Twitter",
+					value: "//twitter.com/fabiopagoti"
+				},
+				{
+					type: "TextView",
+					name: "GitHub",
+					value: "//github.com/fabiopagoti"
+				}
+				],
+				getStuff: function(){
+					
+				}
+			};
+
+			/*
+			* Para carregar um model (ou modelo)
+			*/
+			
+			// Opção 1: diretamente via construtor (passando um objeto ou uma URL)
+			// var model = new sap.ui.model.json.JSONModel(obj);
+
+			// Opção 2: lazy loading
+			var model = new sap.ui.model.json.JSONModel();
+			// ... obj/URL é criado
+			model.setData(obj);
+
+			
+			/* 
+			* Para definir o data binding é preciso definir:
+				1) O path ao modelo (de onde aquela informação vem no modelo) i.e. o caminho da raiz até o atributo 
+				2) Definir qual o modelo (uma aplicação pode ter mais de um modelo)
+			*/
+			
+			/*
+			* Binding via construtor
+ 			* 1) '/' (barra) denota a raiz do modelo (semelhante ao Root Context Node no Web Dynpro)
+ 			* 2) {} (colchetes) denotam que a string é uma referência ao modelo e não um valor em si - i.e. Data Binding está sendo usado
+ 			*/
+			var text_field_name = new sap.ui.commons.TextField({
+				value: "{/name}"
+			});
+			text_field_name.setModel(model); // neste caso o modelo somente se aplica ao text_field_name
+			
+			// Para usar o mesmo modelo em toda uma aplicação, use o objeto core
+			sap.ui.getCore().setModel(model);
+			
+			/*
+			* Binding via método (note que não precisa mais das chaves). Os métodos bind já servem para isso
+			* Há métodos para criar binding de atributos em específico - geralmente os mais usados em um controle
+			*/
+			var text_field_last_name = new sap.ui.commons.TextField();
+			text_field_last_name.bindValue("/last_name");
+
+			/* 
+			* Binding via método "genérico" - serve para qualquer atributo já que o mesmo é passado como parâmetro
+			* IMPORTANTE! A documentação do segundo parâmetro da chamada abaixo está na classe sap.ui.base.ManagedObject
+			* Lá estará documento quem é "path"
+			*/
+			var text_view_age = new sap.ui.commons.TextView();
+			text_view_age.bindProperty("text",{
+				path: "/age"
+			});
+
+			/*
+			* Formatando números no modelo usando tipos
+			*/
+			var text_view_grade_1 = new sap.ui.commons.TextView();
+			text_view_grade_1.bindProperty("text",{
+				path: "/grade",
+				type: new sap.ui.model.type.Float({
+				  minIntegerDigits: 1,
+				  maxIntegerDigits: 2,
+				  minFractionDigits: 0,
+				  maxFractionDigits: 2,
+				  decimalSeparator: ",",
+				})
+			});
+
+			/*
+			* Formatando dados usando uma função de formatação
+			*/
+			var text_view_grade_2 = new sap.ui.commons.TextView();
+			text_view_grade_2.bindProperty("text",{
+				path: "/grade",
+				type: new sap.ui.model.type.Float({
+				  minIntegerDigits: 1,
+				  maxIntegerDigits: 2,
+				  minFractionDigits: 0,
+				  maxFractionDigits: 2,
+				  decimalSeparator: ",",
+				}),
+				formatter: function(g){
+					var g_number = g.replace(',','.'); // o valor já foi formatado pelo tipo
+					g_number = new Number(g_number);
+					g_number = g_number.valueOf();
+					if (g_number > 9) {
+						return g + "( A )";
+					} else if (g_number > 7){
+						return g + "( B )";
+					} else if (g_number > 5){
+						return g + "( C )";
+					} else if (g_number > 3){
+						return g + "( D )";
+					} else{
+						return g_number + "( E )";
+					};
+				}
+			});
+
+			/*
+			* Formatando datas no modelo usando tipos
+			*/
+			// formatação de acordo com o user locale que pode ser extraído usando a chamada
+			// sap.ui.getCore().getConfiguration().getLocale().toString()
+			var type_date = new sap.ui.model.type.Date({source: {}});
+
+			// Outras opções
+			// var type_date = 
+			// 	new sap.ui.model.type.Date({
+			// 		source: {
+			// 			pattern: "yyyymmdd"
+			// 		}, 
+			// 		style: "full"
+			// 	}); 
+			// var type_date = 
+			// 	new sap.ui.model.type.Date({
+			// 		source: {
+			// 			pattern: "yyyymmdd"
+			// 		}, 
+			// 		pattern: "dd - mm - yy"
+			// 	}); 
+
+			var text_view_birthday = new sap.ui.commons.TextView();
+			text_view_birthday.bindProperty("text",{
+				path: "/birthday",
+				type: type_date
+			});
+
+			/*
+			* Complex binding
+			* Definir binding para 2+ propriedades é totalmente aceitável 
+			* É possível usar mais de um "nó" do modelo para o data binding **da mesma** propriedade. Isso requer definir um binding complexo no bootstrap
+			*/
+			var text_area_address = new sap.ui.commons.TextArea({
+				editable: "{/address/edit}",
+				value: "{/address/street/name} - {/address/street/number}" +
+						"\n" +
+						"{/address/city}" + 
+						"/{/address/state}",
+			});
+
+			/*
+			* Data binding para propriedades de agregação (semelhante a fazer binding de um nó com cardinalidade 0..n no Web Dynpro)
+			* Propriedades de agregação são mapeadas a arrays! Cada item do array é criado conforme um controle *template* 
+			*/
+			
+			// Template: simplesmente uma instancia do tipo esperado na propriedade de agregacao
+			var item_template = new sap.ui.core.Item({
+				text: "{}"
+			});
+			var radio_group_skills_1 = new sap.ui.commons.RadioButtonGroup();
+			radio_group_skills_1.bindItems("/skills", item_template); // binding via método
+
+			// Template criado direramente no construtor 
+			var radio_group_skills_2 = new sap.ui.commons.RadioButtonGroup({
+				items: {
+					path: "/skills",
+					template: new sap.ui.core.Item({
+						text: "{}"
+					})
+				}
+			});
+			
+			
+			/* 
+			* Definindo mais de um binding no template (linhas de tabelas funcionam assim)
+			*/
+			var list_box_fan_of = new sap.ui.commons.ListBox({
+				items: 
+				{
+					path: "/fan_of",
+					template: new sap.ui.core.Item({
+						text: "{name}",
+						tooltip: "{job}"
+					})
+				}
+			});
+			var combo_box = new sap.ui.commons.ComboBox({
+				listBox: list_box_fan_of
+			});
+
+			/*
+			* Exemplo de factory function.
+			* Uma factory function será chamada para cada item do array especificado no binding. 
+			* Esta função Deve retornar um controle que deve ser criado dinamicamente
+			*/
+			var panel = new sap.ui.commons.Panel({
+				text: "Social",
+				width: "200px",
+				content: new sap.ui.layout.VerticalLayout({
+					content: {
+						path: "/social", 
+						factory: function(id,context){
+							if (context.getProperty("type") == 
+								"Link") {
+								return new sap.ui.commons.layout.HorizontalLayout({
+									content: [
+												new sap.ui.commons.Image({
+													src: "https://g.twimg.com/dev/documentation/image/Twitter_logo_blue_48.png"
+												}),
+												new sap.ui.commons.Link({
+													text: "{name}",
+													href: "{value}"
+												})
+									         ]
+								}); 
+							} else{
+								return new sap.ui.commons.layout.HorizontalLayout({
+									content: [
+												new sap.ui.commons.Image({
+													src: "https://cdn.cine.io/images/code-logos/github-logo.png"
+												}),
+												new sap.ui.commons.TextView({
+								                    text: "{name}"
+								                })
+									         ]
+								});
+							}
+						}
+					}
+				})
+				
+			});
+
+
+			
+			var vertical_layout = new sap.ui.layout.VerticalLayout();
+
+			vertical_layout.addContent(new sap.ui.commons.TextView({
+				design : sap.ui.commons.TextViewDesign.H4,
+				text : "Binding via construtor"
+			}));
+
+			vertical_layout.addContent(text_field_name);
+
+			vertical_layout.addContent(new sap.ui.commons.TextView({
+				design : sap.ui.commons.TextViewDesign.H4,
+				text : "Binding via método específico de propriedade"
+			}));
+
+			vertical_layout.addContent(text_field_last_name);
+
+
+			vertical_layout.addContent(new sap.ui.commons.TextView({
+				design : sap.ui.commons.TextViewDesign.H4,
+				text : "Binding via método genérico de propriedade"
+			}));
+
+			vertical_layout.addContent(text_view_age);
+
+			vertical_layout.addContent(new sap.ui.commons.TextView({
+				design : sap.ui.commons.TextViewDesign.H4,
+				text : "Formatando números no modelo usando tipos (sap.ui.model.type)"
+			}));
+
+			vertical_layout.addContent(text_view_grade_1);
+			
+			vertical_layout.addContent(new sap.ui.commons.TextView({
+				design : sap.ui.commons.TextViewDesign.H4,
+				text : "Formatando dados usando uma função de formatação"
+			}));
+			
+			vertical_layout.addContent(text_view_grade_2);
+
+			vertical_layout.addContent(new sap.ui.commons.TextView({
+				design : sap.ui.commons.TextViewDesign.H4,
+				text : "Formatando datas no modelo usando tipos"
+			}));
+
+			vertical_layout.addContent(text_view_birthday);
+
+			vertical_layout.addContent(new sap.ui.commons.TextView({
+				design : sap.ui.commons.TextViewDesign.H4,
+				text : "Complex binding"
+			}));
+			
+			vertical_layout.addContent(text_area_address);
+
+			vertical_layout.addContent(new sap.ui.commons.TextView({
+				design : sap.ui.commons.TextViewDesign.H4,
+				text : "Data binding para propriedades de agregação 1"
+			}));
+
+			vertical_layout.addContent(radio_group_skills_1);
+			
+			vertical_layout.addContent(new sap.ui.commons.TextView({
+				design : sap.ui.commons.TextViewDesign.H4,
+				text : "Data binding para propriedades de agregação 2"
+			}));
+
+			vertical_layout.addContent(radio_group_skills_2);
+
+			vertical_layout.addContent(new sap.ui.commons.TextView({
+				design : sap.ui.commons.TextViewDesign.H4,
+				text : "Definindo mais de um binding no template"
+			}));
+
+			vertical_layout.addContent(list_box_fan_of);
+			// ou vertical_layout.addContent(combo_box);
+
+
+			vertical_layout.addContent(new sap.ui.commons.TextView({
+				design : sap.ui.commons.TextViewDesign.H4,
+				text : "Factory function"
+			}));
+
+			vertical_layout.addContent(panel);
+
+			vertical_layout.placeAt("content");
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>

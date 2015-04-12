@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		
+		<title>UI5 and D3</title>
+		<style type="text/css">
+
+		svg {
+		  font-family: "Helvetica Neue", Helvetica;
+		}
+		
+		.line {
+		  fill: none;
+		  stroke: #000;
+		  stroke-width: 2px;
+		}
+		
+		</style>
+		
+		<script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.ui.commons"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- add sap.ui.table,sap.ui.ux3 and/or other libraries to 'data-sap-ui-libs' if required -->
+
+		<script>
+				sap.ui.localResources("ui5_and_d3");
+				sap.ui.localResources("resources");
+		
+				var view = sap.ui.view({id:"idmain1", viewName:"ui5_and_d3.main", type:sap.ui.core.mvc.ViewType.JS});
+				view.placeAt("content");
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>

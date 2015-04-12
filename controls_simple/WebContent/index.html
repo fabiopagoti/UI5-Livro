@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		
+
+		<script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.ui.commons"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- add sap.ui.table,sap.ui.ux3 and/or other libraries to 'data-sap-ui-libs' if required -->
+
+		<script>
+			
+			/*
+			sap.ui.localResources("controls_simple");
+			var view = sap.ui.view({id:"idmain1", viewName:"controls_simple.main", type:sap.ui.core.mvc.ViewType.JS});
+			view.placeAt("content");
+			 */
+			
+			
+			 /*
+			 * TextView
+			 * 1) Criando um controle e o renderizando posteriormente 
+			 */
+			var text_view = new sap.ui.commons.TextView({
+				text : "This book was written for special folks who are interested in:",
+				wrapping : true,
+				width:"50%",
+				semanticColor : sap.ui.commons.TextViewColor.Critical,
+				textAlign : sap.ui.core.TextAlign.Center,
+				tooltip : 'This is a tooltip',
+			});
+			text_view.placeAt("divTextView");
+			
+			/*
+			* FormattedTextView
+			* 1) Usando variáveis para deixar o código mais limpo
+			* 2) Chamadas aninhadas - o construtor devolve uma referência ao próprio controle
+			*/
+			var some_html_text = 
+				"<ul>" + 
+					"<li>HTML</li>" +
+					"<li>CSS</li>" +
+					"<li>Javascript</li>" +
+					"<li>SAP</li>" +
+				"</ul>";
+			var formatted_text_view = new sap.ui.commons.FormattedTextView({
+				htmlText : some_html_text
+			}).placeAt("divFormattedTextView"); // Chamada aninhada
+
+			/*
+			* Label
+			* 1) Exemplo de propriedade de associação
+			*/
+			var label = new sap.ui.commons.Label({
+				visible : true,
+				text : "Country",
+				required : true,
+				requiredAtBegin : true,
+				labelFor : text_view
+			});
+			label.placeAt("divLabel");
+			
+			/*
+			* HTML
+			* 1) Uma forma de embutir alguma tag, div, etc que pode ser usado por uma outra bibliteca
+			* 2) Forma simples de embutir notação HTML estáticamente
+			*/
+ 			var flag = 
+				"<svg>" +
+					"<rect width='200' height='100' fill='#008000' />" +
+					"<polygon points='100,10 190,50 100,90 10,50' fill='#FFFF00'/>" +
+					"<circle cx='100' cy='50' r='30' fill='#0000FF' />" +
+					"<line x1='70' y1='45' x2='130' y2='55' stroke='white' stroke-width='5' />" +
+				"</svg>";
+			var html = new sap.ui.core.HTML({
+				content : flag,
+			});
+			html.placeAt("divHtml");
+			
+			
+			/*
+			* Button
+			* 1) Definição de contexto em uma função listener (this = handler)
+			* 2) Função wrapper para captura de parâmetros
+			* 3) Captura do controle que gerou um evento
+			*/
+			var handler = {
+				onButtonPressed: function(os, browser){
+					alert(	
+						"You are using a " +
+						browser + 
+						" installed on a " +
+						os + 
+						" system"
+					);
+				}
+			};
+			
+			var button = new sap.ui.commons.Button({
+				text : "What am I using?",
+				icon: "sap-icon://sys-monitor",
+				press : 
+					[ 
+					function(oEvent) {
+						var control = oEvent.getSource();
+						console.log(
+							"Button pressed: " + 
+							control.getText()
+						);
+						this.onButtonPressed(
+							sap.ui.Device.os.name, 
+							sap.ui.Device.browser.name
+						);
+					},
+					handler
+					]
+			});
+			button.placeAt("divButton");
+			
+			
+			/*
+			* ToggleButton
+			* 1) Não definição de um contexto para a função de listerner (this = toggle_button)
+			*/
+			var toggle_button = new sap.ui.commons.ToggleButton({
+				text : "Off",
+				lite : false,
+				style : sap.ui.commons.ButtonStyle.Reject,
+				pressed : false,
+				press : 
+// 					[
+					 function(oEvent) {
+						var control = oEvent.getSource();
+						if (this.getPressed() === false) {
+							this.setStyle(sap.ui.commons.ButtonStyle.Accept);
+							this.setText("On");
+						} else {
+							this.setStyle(sap.ui.commons.ButtonStyle.Reject);
+							this.setText("Off");
+						}
+					}
+// 					, toggle_button ]
+			});
+			toggle_button.placeAt("divToggleButton");
+			
+			
+			/*
+			* Link
+			* 1) Link aberto em uma nova aba
+			*/
+			var link = new sap.ui.commons.Link({
+				text : "Find out more",
+				href : "//hanabrasil.com.br",
+				target : "_blank"
+			});
+			link.placeAt("divLink");
+			
+			
+			/*
+			* Image
+			* 1) Usando uma imagem num servidor remoto (cuidado.. o link pode quebrar!)
+			*/
+			var image = new sap.ui.commons.Image({
+				src : "http://openui5.org/images/OpenUI5_new_big_side.png"
+			});
+			image.placeAt("divImage");
+			
+			
+			/*
+			*ImageMap
+			* 1) Mesma imagem com area com links diferentes
+			*/
+			var image_ui5_logos = new sap.ui.commons.Image({
+				// image size: 217x131
+				src : "http://abap101.com/wp-content/uploads/2015/02/sapui5-openui5.png", 
+			});
+			var image_map = new sap.ui.commons.ImageMap({
+				name : "map1",
+				areas : [ 
+				        	new sap.ui.commons.Area({
+								shape : "rect",
+								coords : "0,76,217,131",
+								href : "https://openui5.hana.ondemand.com/",
+								alt : "SAPUI5",
+							}),
+				        	new sap.ui.commons.Area({
+								shape : "rect",
+								coords : "0,0,217,75" ,
+								href : "https://sapui5.hana.ondemand.com/sdk/",
+								alt : "OpenUI5",
+							})
+				        ]
+			});
+			image_ui5_logos.setUseMap("map1");
+			image_ui5_logos.placeAt("divImageMap");
+			image_map.placeAt("divImageMap");
+		
+			
+		</script>
+
+	</head>
+	
+	<body class="sapUiBody" role="application">
+	
+		<div>
+			<span>TextView</span> 
+			<div id="divTextView"></div>
+		</div>
+		
+		<br><br>
+		
+		<div>
+			<span>FormattedTextView</span>	
+			<div id="divFormattedTextView"></div>
+		</div>
+		
+		<br><br>
+		
+		<div>
+			<span>Label</span>
+			<div id="divLabel"></div>
+		</div>
+		
+		<br><br>
+		
+		<div>
+			<span>HTML</span>
+			<div id="divHtml"></div>
+		</div>
+		
+		<br><br>
+		
+		<div>
+			<span>Button</span>
+			<div id="divButton"></div>
+		</div>
+		
+		<br><br>
+		
+		<div>
+			<span>ToggleButton</span>
+			<div id="divToggleButton"></div>
+		</div>
+		
+		<br><br>
+		
+		<div>
+			<span>Link</span>
+			<div id="divLink"></div>
+		</div>
+		
+		<br><br>
+		
+		<div>
+			<span>Image</span>
+			<div id="divImage"></div>
+		</div>
+		
+		<br><br>
+		
+		<div>
+			<span>ImageMap</span>
+			<div id="divImageMap"></div>
+		</div>
+		
+	</body>
+</html>

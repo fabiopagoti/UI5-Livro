@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+        <title>Mobile Nevegação</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+
+
+        <script
+				src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js" 
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m,sap.ui.commons,sap.ui.layout"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+
+
+<!--
+		<script
+				src="/sap/ui5/1/resources/sap-ui-core.js" 
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m,sap.ui.commons,sap.ui.layout,sap.ui.unified,sap.ui.table"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+-->
+
+		<script>
+
+			
+			sap.ui.localResources("view");
+// 			var view_user_details = sap.ui.view({id:"view_user_details", viewName:"view.user_details", type:sap.ui.core.mvc.ViewType.JS});
+// 			var view_file_input = sap.ui.view({id:"view_file_input", viewName:"view.file_input", type:sap.ui.core.mvc.ViewType.JS});
+// 			var view_options = sap.ui.view({id:"view_options", viewName:"view.options", type:sap.ui.core.mvc.ViewType.JS});
+// 			var view_result = sap.ui.view({id:"view_result", viewName:"view.result", type:sap.ui.core.mvc.ViewType.JS});
+			
+			var view_a = sap.ui.view({id:"view_a", viewName:"view.a", type:sap.ui.core.mvc.ViewType.JS});
+			var view_b = sap.ui.view({id:"view_b", viewName:"view.b", type:sap.ui.core.mvc.ViewType.JS});
+			var view_c = sap.ui.view({id:"view_c", viewName:"view.c", type:sap.ui.core.mvc.ViewType.JS});
+			
+			var app = new sap.m.App("main_container",{
+				height: "100%",
+				width: "100%",
+				visible: true,
+				pages: [view_a, view_b,view_c],
+			});
+
+			var sheel = new sap.m.Shell("shell", {
+				app : app,
+			});
+
+			sheel.placeAt("content");
+
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>

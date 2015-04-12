@@ -1,0 +1,39 @@
+<!DOCTYPE html>  
+<html>
+
+<head>  
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />  
+    <title>Hello World</title>  
+  
+  <!-- Carregando o UI5 instalado localmente -->
+    <script id='sap-ui-bootstrap' 
+        src='../../../openui5-sdk/resources/sap-ui-core.js'  
+        data-sap-ui-theme='sap_bluecrystal'  
+        data-sap-ui-libs='sap.ui.commons'>
+    </script>  
+
+<!-- Carregando o UI5 a partir de CDN
+    <script id='sap-ui-bootstrap' 
+        src='https://openui5.hana.ondemand.com/resources/sap-ui-core.js'  
+        data-sap-ui-theme='sap_bluecrystal'  
+        data-sap-ui-libs='sap.ui.commons'>
+    </script>   
+ -->
+
+<script>  
+
+    var hello = new sap.ui.commons.TextView({
+        text: 'Hello World',
+    });
+
+    hello.placeAt('content');
+    
+</script>
+
+</head>
+
+<body class='sapUiBody'>
+    <div id='content'></div>
+</body>
+
+</html>
