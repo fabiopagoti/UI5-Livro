@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<myself>
+	<name>Fabio</name>
+	<last_name>Pagoti</last_name>
+	<age>25</age>
+	<birthday>19890727</birthday>
+	<grade>7.2375</grade>
+	<address>
+		<edit>false</edit>
+		<street>
+			<name>Av Paulista</name>
+			<number>20000</number>
+		</street>
+		<city>São Paulo</city>
+		<state>SP</state>
+	</address>
+	<skills>ui5</skills>
+	<skills>hana</skills>
+	<skills>abap</skills>
+	<fan_of>
+		<name>Pele</name>
+		<job>Former soccer player</job>
+	</fan_of>
+	<fan_of>
+		<name>Allen Iverson</name>
+		<job>Basketball player</job>
+	</fan_of>
+	<fan_of>
+		<name>Jason Mraz</name>
+		<job>Singer</job>
+	</fan_of>
+	<fan_of>
+		<name>Jorge Drexler</name>
+		<job>Singer</job>
+	</fan_of>
+	<social>
+		<type>Link</type>
+		<name>Twitter</name>
+		<value>//twitter.com/fabiopagoti</value>
+	</social>
+	<social>
+		<type>TextView</type>
+		<name>GitHub</name>
+		<value>//github.com/fabiopagoti</value>
+	</social>
+</myself>
