@@ -2,52 +2,88 @@
 <html>
 
 <head>  
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' />  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
     <title>Hello World</title>  
-  
-    <!-- 
-        Carregando o UI5 instalado localmente
-        
-        Ajuste a propriedade src abaixo
-        para apontar para o diretório que contenha o 
-        SDK ou pacote runtime do OpenUI5
-        (caso tenha feito download do mesmo)
 
-        ../ significa "um diretorio acima"
-        
-        ./ significa "diretorio atual"
-        
-        Logo, no caso abaixo a SDK do ui5 está
-        localizada três diretórios acima do 
-        arquivo sendo aberto.  
+	<!-- Carregando o SAPUI5 a partir de CDN
+	
+    <script id="sap-ui-bootstrap"
+        src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_bluecrystal"
+        data-sap-ui-libs="sap.m">
+    </script>
+    
      -->
+
+	<!-- Carregando o SAPUI5 a partir de CDN do HCP
+	
+    As rotas definidas dentro do arquivo neo-app.json são usadas
+	pela SAP Web IDE para fazer chamadas a outros domínios
+	 
+    <script id="sap-ui-bootstrap"
+        src="/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_bluecrystal"
+        data-sap-ui-libs="sap.m">
+    </script>
+    
+	-->
+	
+ 	<!-- Carregando o OpenUI5 a partir de CDN
+    
+    <script id="sap-ui-bootstrap"
+        src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_bluecrystal"
+        data-sap-ui-libs="sap.m">
+    </script>
+	
+	-->
+
+	<!-- Carregando o OpenUI5 instalado localmente
+	
+    Ajuste a propriedade src abaixo
+    para apontar para o diretório que contenha o 
+    SDK ou pacote runtime do OpenUI5
+    (caso tenha feito download do mesmo)
+
+    ../ significa "um diretorio acima"
+    
+    ./ significa "diretorio atual"
+    
+    Logo, no caso abaixo a SDK do ui5 está
+    localizada três diretórios acima do 
+    arquivo sendo aberto.  
+
     <script id='sap-ui-bootstrap' 
         src='../../../openui5-sdk/resources/sap-ui-core.js'  
         data-sap-ui-theme='sap_bluecrystal'  
         data-sap-ui-libs='sap.m'>
     </script>  
 
-<!-- Carregando o UI5 a partir de CDN
-    <script id='sap-ui-bootstrap' 
-        src='https://openui5.hana.ondemand.com/resources/sap-ui-core.js'  
-        data-sap-ui-theme='sap_bluecrystal'  
-        data-sap-ui-libs='sap.m'>
-    </script>   
- -->
+    <script>  
 
-<script>  
+        var oHelloText = new sap.m.Text({
+            text: 'Hello World',
+        });
 
-    var oHelloText = new sap.m.Text({
-        text: 'Hello World',
-    });
-
-    oHelloText.placeAt('content');
-    
-</script>
+        oHelloText.placeAt('content');
+        
+    </script>
 
 </head>
 
-<body id='content' class='sapUiBody'>
+	<script>  
+	
+	    var hello = new sap.m.Text({
+	        text: "Hello World",
+	    });
+	
+	    hello.placeAt("content");
+	    
+	</script>
+
+</head>
+
+<body class="sapUiBody">
     <!-- 
         O UI5 criará elementos aqui dentro
         dinamicamente de acordo com os
@@ -56,7 +92,8 @@
         No exemplo acima o controle 
         sap.m.Text
         foi o único criado
-     -->
+    -->
+    <div id="content"></div>
 </body>
 
 </html>
