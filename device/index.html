@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+	
+	<script src="/resources/sap-ui-core.js"
+			id="sap-ui-bootstrap"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-libs="sap.m">
+	</script>
+	
+	<script>
+		sap.ui.localResources("controller");
+		sap.ui.localResources("view");
+		
+		var view = sap.ui.view({
+			viewName: "view.info", 
+			type: sap.ui.core.mvc.ViewType.XML
+		});
+		
+		view.placeAt("content");
+	</script>
+
+</head>
+	
+<body class="sapUiBody">
+	<div id="content"></div>
+</body>
+
+</html>

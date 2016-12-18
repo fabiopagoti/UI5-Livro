@@ -1,0 +1,15 @@
+<mvc:View 
+	controllerName="controller.info"
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	>
+	<Label text="Browser" />
+	<Text id="browser" />
+	
+	<Label text="OS" />
+	<Text id="os" />
+	
+	<Label text="Device" />
+	<Text id="device" />
+	
+</mvc:View>

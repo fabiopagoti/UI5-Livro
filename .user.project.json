@@ -1,6 +1,25 @@
 {
   "run": [
     {
+      "filePath": "/device/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "urlParametersNotNeeded": true,
+      "_metadata": {
+        "id": 4180725,
+        "runnerId": "webapprunner",
+        "displayName": "Device",
+        "lastRunTimeStamp": 1482102045662
+      }
+    },
+    {
       "filePath": "/hello_world/index.html",
       "previewMode": 1,
       "dataMode": 1,
@@ -15,7 +34,7 @@
       "_metadata": {
         "id": 8272450,
         "runnerId": "webapprunner",
-        "displayName": "00 - Hello Word",
+        "displayName": "Hello Word",
         "lastRunTimeStamp": 1482096515504
       }
     }
