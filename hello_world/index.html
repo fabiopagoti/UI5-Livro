@@ -2,38 +2,67 @@
 <html>
 
 <head>  
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' />  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
     <title>Hello World</title>  
-  
-  <!-- Carregando o UI5 instalado localmente -->
+
+	<!-- Carregando o SAPUI5 a partir de CDN
+	
+    <script id="sap-ui-bootstrap"
+        src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_bluecrystal"
+        data-sap-ui-libs="sap.m">
+    </script>
+    
+     -->
+
+	<!-- Carregando o SAPUI5 a partir de CDN do HCP
+	As rotas definidas dentro do arquivo neo-app.json são usadas
+	pela SAP Web IDE para fazer chamadas a outros domínios
+	 
+    <script id="sap-ui-bootstrap"
+        src="/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_bluecrystal"
+        data-sap-ui-libs="sap.m">
+    </script>
+    
+	-->
+	
+ 	<!-- Carregando o OpenUI5 a partir de CDN
+    
+    <script id="sap-ui-bootstrap"
+        src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_bluecrystal"
+        data-sap-ui-libs="sap.m">
+    </script>
+	
+	-->
+
+	<!-- Carregando o OpenUI5 instalado localmente
+	
+	Use ../ para subir um diretório 
+	
     <script id='sap-ui-bootstrap' 
         src='../../../openui5-sdk/resources/sap-ui-core.js'  
         data-sap-ui-theme='sap_bluecrystal'  
         data-sap-ui-libs='sap.ui.commons'>
     </script>  
-
-<!-- Carregando o UI5 a partir de CDN
-    <script id='sap-ui-bootstrap' 
-        src='https://openui5.hana.ondemand.com/resources/sap-ui-core.js'  
-        data-sap-ui-theme='sap_bluecrystal'  
-        data-sap-ui-libs='sap.ui.commons'>
-    </script>   
- -->
-
-<script>  
-
-    var hello = new sap.ui.commons.TextView({
-        text: 'Hello World',
-    });
-
-    hello.placeAt('content');
-    
-</script>
+	
+	-->
+	
+	<script>  
+	
+	    var hello = new sap.m.Text({
+	        text: "Hello World",
+	    });
+	
+	    hello.placeAt("content");
+	    
+	</script>
 
 </head>
 
-<body class='sapUiBody'>
-    <div id='content'></div>
+<body class="sapUiBody">
+    <div id="content"></div>
 </body>
 
 </html>
