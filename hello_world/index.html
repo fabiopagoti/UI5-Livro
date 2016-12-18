@@ -16,7 +16,8 @@
      -->
 
 	<!-- Carregando o SAPUI5 a partir de CDN do HCP
-	As rotas definidas dentro do arquivo neo-app.json são usadas
+	
+    As rotas definidas dentro do arquivo neo-app.json são usadas
 	pela SAP Web IDE para fazer chamadas a outros domínios
 	 
     <script id="sap-ui-bootstrap"
@@ -39,16 +40,37 @@
 
 	<!-- Carregando o OpenUI5 instalado localmente
 	
-	Use ../ para subir um diretório 
-	
+    Ajuste a propriedade src abaixo
+    para apontar para o diretório que contenha o 
+    SDK ou pacote runtime do OpenUI5
+    (caso tenha feito download do mesmo)
+
+    ../ significa "um diretorio acima"
+    
+    ./ significa "diretorio atual"
+    
+    Logo, no caso abaixo a SDK do ui5 está
+    localizada três diretórios acima do 
+    arquivo sendo aberto.  
+
     <script id='sap-ui-bootstrap' 
         src='../../../openui5-sdk/resources/sap-ui-core.js'  
         data-sap-ui-theme='sap_bluecrystal'  
-        data-sap-ui-libs='sap.ui.commons'>
+        data-sap-ui-libs='sap.m'>
     </script>  
-	
-	-->
-	
+
+    <script>  
+
+        var oHelloText = new sap.m.Text({
+            text: 'Hello World',
+        });
+
+        oHelloText.placeAt('content');
+        
+    </script>
+
+</head>
+
 	<script>  
 	
 	    var hello = new sap.m.Text({
@@ -62,6 +84,15 @@
 </head>
 
 <body class="sapUiBody">
+    <!-- 
+        O UI5 criará elementos aqui dentro
+        dinamicamente de acordo com os
+        os controles criados.
+
+        No exemplo acima o controle 
+        sap.m.Text
+        foi o único criado
+    -->
     <div id="content"></div>
 </body>
 

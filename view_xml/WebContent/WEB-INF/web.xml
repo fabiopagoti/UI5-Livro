@@ -5,7 +5,7 @@
 		version="2.5"
 		xmlns="http://java.sun.com/xml/ns/javaee">
 
-	<display-name>back_end_json</display-name>
+	<display-name>view_xml</display-name>
 
 	<!-- ============================================================== -->
 	<!-- UI5 resource servlet used to handle application resources      -->
