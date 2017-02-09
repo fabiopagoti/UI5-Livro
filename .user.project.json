@@ -1,42 +1,24 @@
 {
-  "run": [
-    {
-      "filePath": "/device/index.html",
-      "previewMode": 1,
-      "dataMode": 1,
-      "workspace": "withoutWorkspace",
-      "ui5ActiveVersion": null,
-      "ui5VerSource": null,
-      "isDefaultVersion": 0,
-      "urlParameters": [],
-      "hashParameter": "",
-      "backendSystem": [],
-      "urlParametersNotNeeded": true,
-      "_metadata": {
-        "id": 4180725,
-        "runnerId": "webapprunner",
-        "displayName": "Device",
-        "lastRunTimeStamp": 1482102045662
-      }
-    },
-    {
-      "filePath": "/hello_world/index.html",
-      "previewMode": 1,
-      "dataMode": 1,
-      "workspace": "withoutWorkspace",
-      "ui5ActiveVersion": "",
-      "ui5VerSource": null,
-      "isDefaultVersion": 0,
-      "urlParameters": [],
-      "hashParameter": "",
-      "backendSystem": [],
-      "urlParametersNotNeeded": true,
-      "_metadata": {
-        "id": 8272450,
-        "runnerId": "webapprunner",
-        "displayName": "Hello Word",
-        "lastRunTimeStamp": 1482096515504
-      }
-    }
-  ]
+	"run": [{
+		"filePath": "/hello_world/index.html",
+		"previewMode": 1,
+		"dataMode": 1,
+		"workspace": "withoutWorkspace",
+		"ui5ActiveVersion": null,
+		"ui5VerSource": null,
+		"isDefaultVersion": 0,
+		"urlParameters": [{
+			"paramName": "",
+			"paramValue": ""
+		}],
+		"hashParameter": "",
+		"backendSystem": [],
+		"urlParametersNotNeeded": false,
+		"_metadata": {
+			"id": 419340,
+			"runnerId": "webapprunner",
+			"displayName": "01 - Hello World",
+			"lastRunTimeStamp": 1486602322693
+		}
+	}]
 }
