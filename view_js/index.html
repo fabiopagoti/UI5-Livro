@@ -1,0 +1,35 @@
+<!DOCTYPE html>  
+<html>
+
+<head>  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    
+    <title>01 - Visões JavaScript</title>  
+     
+    <script id="sap-ui-bootstrap"
+        src="/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_bluecrystal"
+        data-sap-ui-libs="sap.m">
+    </script>
+    
+    <script>
+    	
+		sap.ui.localResources("view");
+		sap.ui.localResources("controller");
+		
+    	var oView = sap.ui.view({
+    		viewName:"view.S0", 
+    		type:sap.ui.core.mvc.ViewType.JS
+    	});
+    	
+		oView.placeAt("content");
+		
+    </script>
+   
+</head>
+
+<body id="content" class="sapUiBody">
+</body>
+
+</html>

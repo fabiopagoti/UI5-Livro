@@ -1,0 +1,13 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="controller.S0">
+	<App>
+		<pages>
+			<Page title="Página 1">
+				<content>
+					<Input id="firstname" placeholder="First Name" change="onChangeInputFirst"/>
+					<Input id="lastname" placeholder="Last Name" liveChange="onLiveChangeInputLast"/>
+					<Text id="fullname" />
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

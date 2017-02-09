@@ -1,24 +1,88 @@
 {
-	"run": [{
-		"filePath": "/hello_world/index.html",
-		"previewMode": 1,
-		"dataMode": 1,
-		"workspace": "withoutWorkspace",
-		"ui5ActiveVersion": null,
-		"ui5VerSource": null,
-		"isDefaultVersion": 0,
-		"urlParameters": [{
-			"paramName": "",
-			"paramValue": ""
-		}],
-		"hashParameter": "",
-		"backendSystem": [],
-		"urlParametersNotNeeded": false,
-		"_metadata": {
-			"id": 419340,
-			"runnerId": "webapprunner",
-			"displayName": "01 - Hello World",
-			"lastRunTimeStamp": 1486602322693
-		}
-	}]
+  "run": [
+    {
+      "filePath": "/view_controller/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "urlParametersNotNeeded": false,
+      "_metadata": {
+        "id": 1069158,
+        "runnerId": "webapprunner",
+        "displayName": "04 - Controlles de Visões",
+        "lastRunTimeStamp": 1486604435528
+      }
+    },
+    {
+      "filePath": "/hello_world/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [
+        {
+          "paramName": "",
+          "paramValue": ""
+        }
+      ],
+      "hashParameter": "",
+      "backendSystem": [],
+      "urlParametersNotNeeded": false,
+      "_metadata": {
+        "id": 419340,
+        "runnerId": "webapprunner",
+        "displayName": "01 - Hello World",
+        "lastRunTimeStamp": 1486602322693
+      }
+    },
+    {
+      "filePath": "/view_js/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [
+        {
+          "paramName": "",
+          "paramValue": ""
+        }
+      ],
+      "hashParameter": "",
+      "backendSystem": [],
+      "_metadata": {
+        "id": 9848461,
+        "runnerId": "webapprunner",
+        "displayName": "02 - Visões JavaScript",
+        "lastRunTimeStamp": 1486602859997
+      }
+    },
+    {
+      "filePath": "/view_xml/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "_metadata": {
+        "id": 5132139,
+        "runnerId": "webapprunner",
+        "displayName": "03 - Visões XML",
+        "lastRunTimeStamp": 1486604064496
+      }
+    }
+  ]
 }
