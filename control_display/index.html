@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta charset="UTF-8">
+    
+    	<title>06 - Controles Display</title>
+     
+		<script src="/resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+
+		<script>
+		
+			 /*
+			 * TextView
+			 * 1) Criando um controle e o renderizando posteriormente 
+			 */
+			var oText = new sap.m.Text({
+				text : "This book was written for special folks who are interested in:",
+				wrapping : true,
+				textAlign : sap.ui.core.TextAlign.Center,
+				width:"50%",
+				tooltip : "This is a tooltip",
+			});
+			oText.placeAt("divText");
+			
+			/*
+			* FormattedText
+			* 1) Usando variáveis para deixar o código mais limpo
+			* 2) Chamadas aninhadas - o construtor devolve uma referência ao próprio controle
+			*/
+			var sHTMLText = 
+				"<ul>" + 
+					"<li>UI5</li>" +
+					"<li>Javascript</li>" +
+					"<li>Fiori</li>" +
+					"<li>ABAP</li>" +
+					"<li>HANA</li>" +
+				"</ul>";
+			new sap.m.FormattedText({
+				htmlText : sHTMLText
+			}).placeAt("divFormattedText"); // Chamada aninhada
+
+			/*
+			* Label
+			* 1) Exemplo de propriedade de associação
+			*/
+			var oInput = new sap.m.Input();
+			var oLabel = new sap.m.Label({
+				visible : true,
+				text : "Country",
+				required : true,
+				requiredAtBegin : true,
+				labelFor : oInput
+			});
+			oLabel.placeAt("divLabel");
+			oInput.placeAt("divLabel");
+			/*
+			* HTML
+			* 1) Uma forma de embutir alguma tag, div, etc que pode ser usado por uma outra bibliteca
+			* 2) Forma simples de embutir notação HTML estáticamente
+			*/
+ 			var sFlag = 
+				"<svg>" +
+					"<rect width='200' height='100' fill='#008000' />" +
+					"<polygon points='100,10 190,50 100,90 10,50' fill='#FFFF00'/>" +
+					"<circle cx='100' cy='50' r='30' fill='#0000FF' />" +
+					"<line x1='70' y1='45' x2='130' y2='55' stroke='white' stroke-width='5' />" +
+				"</svg>";
+			var oHTML = new sap.ui.core.HTML({
+				content : sFlag,
+			});
+			oHTML.placeAt("divHtml");
+			
+			/*
+			* Image
+			* 1) Usando uma imagem num servidor remoto (cuidado.. o link pode quebrar!)
+			*/
+			var oImage = new sap.m.Image({
+				src : "http://openui5.org/images/OpenUI5_new_big_side.png"
+			});
+			oImage.placeAt("divImage");
+			
+			
+		</script>
+
+	</head>
+	
+	<body class="sapUiBody" role="application">
+	
+		<div>
+			<span>Text</span> 
+			<div id="divText"></div>
+		</div>
+		
+		<br><br>
+		
+		<div>
+			<span>FormattedText</span>	
+			<div id="divFormattedText"></div>
+		</div>
+		
+		<br><br>
+		
+		<div>
+			<span>HTML</span>	
+			<div id="divHtml"></div>
+		</div>
+		
+		<br><br>
+		
+		<div>
+			<span>Label</span>
+			<div id="divLabel"></div>
+		</div>
+
+		<br><br>
+		
+		<div>
+			<span>Image</span>
+			<div id="divImage"></div>
+		</div>
+
+	</body>
+</html>

@@ -37,6 +37,8 @@ sap.ui.define([
 		 * Given a browser abbreviation, get its name 
 		 */
 		getBrowserName: function(browserShortName) {
+			
+			
 			for (var browserName in sap.ui.Device.browser.BROWSER) {
 				if (browserShortName === sap.ui.Device.browser.BROWSER[browserName]) {
 					return browserName.toLowerCase();
