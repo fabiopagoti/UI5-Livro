@@ -1,0 +1,54 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout" xmlns="sap.m" xmlns:semantic="sap.m.semantic" controllerName="controller.S0">
+	<App>
+		<pages>
+			<semantic:FullscreenPage title="Tabela">
+				<semantic:content>
+					<Table noDataText="Drop column list items here and columns in the area above" id="__table0">
+						<columns>
+							<Column demandPopin="true">
+								<header>
+									<Label text="Header 1"/>
+								</header>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet" popinDisplay="Inline">
+								<header>
+									<Label text="Header 2"/>
+								</header>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<header>
+									<Label text="Header 3"/>
+								</header>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier title="Title" text="Text"/>
+									<ObjectNumber number="100" unit="Euro"/>
+									<RatingIndicator/>
+								</cells>
+							</ColumnListItem>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier title="Title" text="Text"/>
+									<ObjectNumber number="100" unit="Euro"/>
+									<RatingIndicator/>
+								</cells>
+							</ColumnListItem>
+						</items>
+						<headerToolbar>
+							<Toolbar>
+								<content>
+									<ToolbarSpacer/>
+									<Button icon="sap-icon://settings"/>
+									<Button icon="sap-icon://add"/>
+								</content>
+							</Toolbar>
+						</headerToolbar>
+					</Table>
+				</semantic:content>
+			</semantic:FullscreenPage>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="UTF-8">
+	    <title>11 - Tabela</title>
+    	
+		<script src="/resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-theme="sap_belize">
+		</script>
+		
+		<script>
+		
+		sap.ui.localResources("view");
+		sap.ui.localResources("controller");
+		
+    	var oView = sap.ui.view({
+    		viewName:"view.S0", 
+    		type:sap.ui.core.mvc.ViewType.XML
+    	});
+    	
+		oView.placeAt("content");
+
+		</script>
+	</head>
+	<body class="sapUiBody" role="application" id="content">
+	</body>
+</html>

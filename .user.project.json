@@ -1,6 +1,25 @@
 {
   "run": [
     {
+      "filePath": "/control_table/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "urlParametersNotNeeded": false,
+      "_metadata": {
+        "id": 6093166,
+        "runnerId": "webapprunner",
+        "displayName": "11 - Tabela",
+        "lastRunTimeStamp": 1486786490701
+      }
+    },
+    {
       "filePath": "/hello_world/index.html",
       "previewMode": 1,
       "dataMode": 1,
