@@ -2,7 +2,7 @@
 	controllerName="controller.S0">
 	<App>
 		<pages>
-			<Page title="Laiautes">
+			<Page title="Leiautes">
 				<content>
 					<Panel>
 						<layout:VerticalLayout>

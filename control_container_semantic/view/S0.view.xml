@@ -1,0 +1,157 @@
+<mvc:View height="100%" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout"
+	xmlns="sap.m" displayBlock="true" xmlns:semantic="sap.m.semantic" controllerName="controller.S0">
+	<SplitApp>
+		<masterPages>
+			<semantic:MasterPage title="Ordens">
+				<semantic:content>
+					<List>
+						<items>
+							<ObjectListItem type="Active" title="Cliente A" number="4214" numberUnit="eur" intro="4501" selected="true" numberState="Success">
+								<attributes>
+									<ObjectAttribute text="Realizado" title="Pagamento"/>
+								</attributes>
+							</ObjectListItem>
+							<ObjectListItem type="Active" title="Cliente B" number="5030,49" numberUnit="usd" intro="4502" markFlagged="true" showMarkers="true"
+								numberState="Warning">
+								<attributes>
+									<ObjectAttribute text="Pendente" title="Pagamento"/>
+								</attributes>
+							</ObjectListItem>
+						</items>
+						<headerToolbar>
+							<Toolbar >
+								<content>
+									<SearchField placeholder="Número da Ordem"/>
+								</content>
+							</Toolbar>
+						</headerToolbar>
+					</List>
+				</semantic:content>
+				<semantic:filter>
+					<semantic:FilterAction/>
+				</semantic:filter>
+				<semantic:group>
+					<semantic:GroupAction/>
+				</semantic:group>
+				<semantic:addAction>
+					<semantic:AddAction/>
+				</semantic:addAction>
+				<semantic:multiSelectAction>
+					<semantic:MultiSelectAction/>
+				</semantic:multiSelectAction>
+			</semantic:MasterPage>
+		</masterPages>
+		<detailPages>
+			<semantic:DetailPage title="Detail Page Title">
+				<semantic:content>
+					<IconTabBar >
+						<items>
+							<IconTabFilter icon="sap-icon://money-bills" text="Valores">
+								<content>
+									<form:Form >
+										<form:layout>
+											<form:ResponsiveGridLayout labelSpanL="2" labelSpanM="2" emptySpanL="2" emptySpanM="1" columnsL="2" columnsM="1"/>
+										</form:layout>
+										<form:formContainers>
+											<form:FormContainer title="Title">
+												<form:formElements>
+													<form:FormElement label="Label A">
+														<form:fields>
+															<Input/>
+														</form:fields>
+													</form:FormElement>
+													<form:FormElement label="Label B">
+														<form:fields>
+															<Input>
+																<layoutData>
+																	<layout:GridData span="L4 M2 S4"/>
+																</layoutData>
+															</Input>
+															<Input>
+																<layoutData>
+																	<layout:GridData span="L4 M2 S4"/>
+																</layoutData>
+															</Input>
+														</form:fields>
+													</form:FormElement>
+													<form:FormElement label="Label C">
+														<form:fields>
+															<Slider/>
+															<RadioButtonGroup>
+																<buttons>
+																	<RadioButton text="Opção A"/>
+																	<RadioButton text="Opção B"/>
+																	<RadioButton text="Opção C"/>
+																</buttons>
+															</RadioButtonGroup>
+														</form:fields>
+													</form:FormElement>
+												</form:formElements>
+											</form:FormContainer>
+										</form:formContainers>
+									</form:Form>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter text="Itens" count="10" icon="sap-icon://task" iconColor="Critical">
+								<content>
+									<List>
+										<items>
+											<StandardListItem title="List Item 1"/>
+											<StandardListItem title="List Item 2"/>
+											<StandardListItem title="List Item 3"/>
+										</items>
+									</List>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter text="Remessas" count="5" icon="sap-icon://shipping-status" iconColor="Positive"/>
+						</items>
+					</IconTabBar>
+				</semantic:content>
+				<semantic:positiveAction>
+					<semantic:PositiveAction text="Positive" press="onSemanticButtonPress"/>
+				</semantic:positiveAction>
+				<semantic:negativeAction>
+					<semantic:NegativeAction text="Negative" press="onSemanticButtonPress"/>
+				</semantic:negativeAction>
+				<semantic:forwardAction>
+					<semantic:ForwardAction press="onSemanticButtonPress"/>
+				</semantic:forwardAction>
+				<semantic:flagAction>
+					<semantic:FlagAction press="onSemanticButtonPress"/>
+				</semantic:flagAction>
+				<semantic:favoriteAction>
+					<semantic:FavoriteAction press="onSemanticButtonPress"/>
+				</semantic:favoriteAction>
+				<semantic:sendEmailAction>
+					<semantic:SendEmailAction press="onSemanticButtonPress"/>
+				</semantic:sendEmailAction>
+				<semantic:sendMessageAction>
+					<semantic:SendMessageAction press="onSemanticButtonPress"/>
+				</semantic:sendMessageAction>
+				<semantic:discussInJamAction>
+					<semantic:DiscussInJamAction press="onSemanticButtonPress"/>
+				</semantic:discussInJamAction>
+				<semantic:shareInJamAction>
+					<semantic:ShareInJamAction press="onSemanticButtonPress"/>
+				</semantic:shareInJamAction>
+				<semantic:printAction>
+					<semantic:PrintAction press="onSemanticButtonPress"/>
+				</semantic:printAction>
+				<semantic:messagesIndicator>
+					<semantic:MessagesIndicator press="onMessagesButtonPress"/>
+				</semantic:messagesIndicator>
+				<semantic:pagingAction>
+					<PagingButton count="5" positionChange="onPositionChange"/>
+				</semantic:pagingAction>
+				<semantic:customFooterContent>
+					<OverflowToolbarButton icon="sap-icon://settings" text="Settings" press="onPress"/>
+					<OverflowToolbarButton icon="sap-icon://video" text="Video" press="onPress"/>
+				</semantic:customFooterContent>
+				<semantic:customShareMenuContent>
+					<Button text="CustomShareBtn1" icon="sap-icon://color-fill" press="onPress"/>
+					<Button text="CustomShareBtn2" icon="sap-icon://crop" press="onPress"/>
+				</semantic:customShareMenuContent>
+			</semantic:DetailPage>
+		</detailPages>
+	</SplitApp>
+</mvc:View>
