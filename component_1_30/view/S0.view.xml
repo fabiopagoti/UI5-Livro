@@ -1,0 +1,11 @@
+<mvc:View controllerName="com.privatetraining.component130.controller.S0" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="Componente">
+				<content>
+					<Text text="v.1.30+"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
