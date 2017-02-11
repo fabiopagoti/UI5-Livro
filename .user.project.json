@@ -1,7 +1,7 @@
 {
   "run": [
     {
-      "filePath": "/control_table/index.html",
+      "filePath": "/event_xml/index.html",
       "previewMode": 1,
       "dataMode": 1,
       "workspace": "withoutWorkspace",
@@ -11,12 +11,29 @@
       "urlParameters": [],
       "hashParameter": "",
       "backendSystem": [],
-      "urlParametersNotNeeded": false,
       "_metadata": {
-        "id": 6093166,
+        "id": 4767918,
         "runnerId": "webapprunner",
-        "displayName": "11 - Tabela",
-        "lastRunTimeStamp": 1486786490701
+        "displayName": "12b - Eventos (Visão XML)",
+        "lastRunTimeStamp": 1486789742776
+      }
+    },
+    {
+      "filePath": "/event_js/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "_metadata": {
+        "id": 9163914,
+        "runnerId": "webapprunner",
+        "displayName": "12a - Eventos (Visão JS)",
+        "lastRunTimeStamp": 1486789546942
       }
     },
     {
@@ -251,6 +268,25 @@
         "runnerId": "webapprunner",
         "displayName": "10b - Container Controls (Semantic)",
         "lastRunTimeStamp": 1486783757230
+      }
+    },
+    {
+      "filePath": "/control_table/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "urlParametersNotNeeded": false,
+      "_metadata": {
+        "id": 6093166,
+        "runnerId": "webapprunner",
+        "displayName": "11 - Tabela",
+        "lastRunTimeStamp": 1486786490701
       }
     }
   ]
