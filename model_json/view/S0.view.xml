@@ -1,0 +1,24 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form"
+	controllerName="com.privatetraining.model.json.controller.S0" displayBlock="true">
+	<App>
+		<pages>
+			<Page title="Modelo JSON">
+				<content>
+					<form:SimpleForm layout="ResponsiveGridLayout" busy="{view>/busy}">
+						<form:content>
+							<core:Title text="Title"/>
+							<Label text="Nome"/>
+							<Input id="input_a" value="{/first}"/>
+							<Label text="Sobrenome"/>
+							<Input id="input_b" value="{/last}"/>
+							<Label text="Nome Completo"/>
+							<Text text="{ path: '/first'} {/last}"/>
+							<Button text="Troca" press="onPress"/>
+						</form:content>
+					</form:SimpleForm>
+					<Button text="Muda Busy" press="onMudaBusy"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

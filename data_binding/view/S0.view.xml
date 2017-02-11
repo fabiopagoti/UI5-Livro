@@ -1,0 +1,28 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form" controllerName="com.privatetraining.model.json.controller.S0" displayBlock="true">
+	<App>
+		<pages>
+			<Page title="Modelo JSON">
+				<content>
+					
+				<form:SimpleForm editable="true" layout="ResponsiveGridLayout" xmlns:sap.ui.core="sap.ui.core" id="__form0">
+					
+				    <form:content>
+					
+				        <core:Title text="Title" />
+					
+				        <Label text="Label 1" />
+				        <Input />
+					
+				        <Input width="100%" id="__input1"/>
+					
+				        <Label text="Label 2" id="__label1"/>
+					
+				        <Input width="100%" id="__input2"/></form:content>
+					
+				</form:SimpleForm>
+					
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
