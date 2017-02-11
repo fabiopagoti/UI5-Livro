@@ -1,0 +1,56 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout" xmlns="sap.m"
+	controllerName="controller.S0">
+	<App>
+		<pages>
+			<Page title="Laiautes">
+				<content>
+					<Panel>
+						<layout:VerticalLayout>
+							<layout:HorizontalLayout>
+								<layout:content>
+									<Label text="Label 1"/>
+									<Input/>
+								</layout:content>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content>
+									<Label text="Label 2"/>
+									<Input/>
+								</layout:content>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content>
+									<Label text="Label 3"/>
+									<Input/>
+								</layout:content>
+							</layout:HorizontalLayout>
+						</layout:VerticalLayout>
+					</Panel>
+					<form:SimpleForm layout="ResponsiveGridLayout">
+						<form:content>
+							<core:Title text="Title A"/>
+							<Label text="Label 1"/>
+							<Input/>
+							<Label text="Label 2"/>
+							<Input width="100%"/>
+							<core:Title text="Title B"/>
+							<Label text="Label 3"/>
+							<ComboBox >
+								<items>
+									<core:Item text="Item"/>
+									<core:Item text="Item"/>
+									<core:Item text="Item"/>
+								</items>
+							</ComboBox>
+							<Label text="Label 4"/>
+							<Slider/>
+							<Label text="Label 5"/>
+							<Switch/>
+							<Switch/>
+						</form:content>
+					</form:SimpleForm>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

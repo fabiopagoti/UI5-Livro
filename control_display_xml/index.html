@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta charset="UTF-8">
+	    <title>06b - Controles Display (XML)</title>
+    	
+		<script src="/resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+
+		<script id="controls" type="ui5/xmlview">
+		<mvc:View
+			xmlns:mvc="sap.ui.core.mvc"
+			xmlns="sap.m">
+			<Text 
+				text="This book was written for special folks who are interested in"
+				wrapping="true"
+				textAlign="Center"
+				width="75%"
+				tooltip="This is a tooltip"
+				/>
+		</mvc:View>
+		</script>
+		
+		<script>
+			sap.ui.xmlview({ viewContent: jQuery("#controls").html()} ).placeAt("divText");
+		</script>
+
+	</head>
+	
+	<body class="sapUiBody" role="application">
+	
+		<div>
+			<span>Text</span> 
+			<div id="divText"></div>
+		</div>
+		
+	
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="controller.S0">
+	<App>
+		<pages>
+			<Page title="Agregações">
+				<content>
+					<ObjectHeader title="Fábio Pagoti" number="31" introActive="true" titleActive="true" intro="Desenvolvedor" numberUnit="pendências">
+					    <additionalNumbers>
+					        <ObjectNumber number="2" unit="Atrasadas"/>
+					        <ObjectNumber number="8" unit="Na última semana"/>
+					    </additionalNumbers>
+					<statuses>
+					    <ObjectStatus text="TI" title="Área"/>
+					</statuses>
+					<attributes>
+					    <ObjectAttribute text="1234" title="Centro de Custo"/>
+					</attributes>
+					</ObjectHeader>
+					<Panel expandable="true" headerText="Filtros">
+						<content>
+							<ComboBox selectedKey="item1">
+								<items>
+									<core:ListItem text="Opção 1" key="item1"/>
+									<core:ListItem text="Opção 2" key="item2"/>
+									<core:ListItem text="Opção 3" key="item3"/>
+								</items>
+							</ComboBox>
+						</content>
+					</Panel>
+					<List noDataText="Nenhuma atividade pendente">
+						<items>
+							<StandardListItem title="Item 1" description="Atividade A" icon="sap-icon://alert"/>
+							<StandardListItem title="Item 2" description="Atividade B" icon="sap-icon://laptop"/>
+							<StandardListItem title="Item 3" description="Atividade C" icon="sap-icon://doctor"/>
+						</items>
+					</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,7 +1,62 @@
 {
   "run": [
     {
-      "filePath": "/control_display/index.html",
+      "filePath": "/controls_layout/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "_metadata": {
+        "id": 2988171,
+        "runnerId": "webapprunner",
+        "displayName": "09 - Layout Controls",
+        "lastRunTimeStamp": 1486780419328
+      }
+    },
+    {
+      "filePath": "/aggregation/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "urlParametersNotNeeded": false,
+      "_metadata": {
+        "id": 3156054,
+        "runnerId": "webapprunner",
+        "displayName": "08 - Agregações",
+        "lastRunTimeStamp": 1486775966333
+      }
+    },
+    {
+      "filePath": "/control_input/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "_metadata": {
+        "id": 1301659,
+        "runnerId": "webapprunner",
+        "displayName": "07- Input Controls",
+        "lastRunTimeStamp": 1486760474485
+      }
+    },
+    {
+      "filePath": "/control_display_js/index.html",
       "previewMode": 1,
       "dataMode": 1,
       "workspace": "withoutWorkspace",
@@ -15,8 +70,27 @@
       "_metadata": {
         "id": 4461058,
         "runnerId": "webapprunner",
-        "displayName": "06 - Controls",
-        "lastRunTimeStamp": 1486757155480
+        "displayName": "06a - Display Controls (JS)",
+        "lastRunTimeStamp": 1486759021172
+      }
+    },
+    {
+      "filePath": "/control_display_xml/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "urlParametersNotNeeded": false,
+      "_metadata": {
+        "id": 1936673,
+        "runnerId": "webapprunner",
+        "displayName": "06b - Display Controls (XML)",
+        "lastRunTimeStamp": 1486758513927
       }
     },
     {

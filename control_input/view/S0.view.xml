@@ -1,0 +1,17 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="controller.S0">
+	<App>
+		<pages>
+			<Page title="Input Controls">
+				<content>
+					<Input value="Fabio" editable="true"/>
+					<Input value="Pagoti" enabled="false"/>
+					<Input type="Number" placeholder="Número"/>
+					<Switch state="true" />
+					<Slider min="5" max="10"/>
+					<RatingIndicator maxValue="10"/>
+					<DatePicker placeholder="dd/mm/aaaa"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
