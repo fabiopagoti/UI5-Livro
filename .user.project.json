@@ -1,8 +1,8 @@
 {
   "run": [
     {
-      "filePath": "/model_resource/Component.js",
-      "previewMode": 1,
+      "filePath": "/data_binding/Component.js",
+      "previewMode": 0,
       "dataMode": 1,
       "workspace": "withoutWorkspace",
       "ui5ActiveVersion": null,
@@ -10,17 +10,17 @@
       "isDefaultVersion": 0,
       "urlParameters": [
         {
-          "paramName": "sap-language",
-          "paramValue": "ES"
+          "paramName": "",
+          "paramValue": ""
         }
       ],
       "hashParameter": "",
       "backendSystem": [],
       "_metadata": {
-        "id": 9615016,
+        "id": 495845,
         "runnerId": "fiorirunner",
-        "displayName": "14c - Modelo Resource (ES)",
-        "lastRunTimeStamp": 1486887088534
+        "displayName": "15 - Data Binding",
+        "lastRunTimeStamp": 1486887446234
       }
     },
     {
@@ -348,6 +348,29 @@
         "runnerId": "webapprunner",
         "displayName": "06b - Display Controls (XML)",
         "lastRunTimeStamp": 1486758513927
+      }
+    },
+    {
+      "filePath": "/model_resource/Component.js",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [
+        {
+          "paramName": "sap-language",
+          "paramValue": "ES"
+        }
+      ],
+      "hashParameter": "",
+      "backendSystem": [],
+      "_metadata": {
+        "id": 9615016,
+        "runnerId": "fiorirunner",
+        "displayName": "14c - Modelo Resource (ES)",
+        "lastRunTimeStamp": 1486887088534
       }
     },
     {

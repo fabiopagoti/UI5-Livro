@@ -1,7 +1,7 @@
 {
 	"_version": "1.5.0",
 	"sap.app": {
-		"id": "com.privatetraining.model.xml",
+		"id": "com.privatetraining.databinding",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"applicationVersion": {
@@ -33,7 +33,7 @@
 	},
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "com.privatetraining.model.xml.view.S0",
+			"viewName": "com.privatetraining.databinding.view.S0",
 			"type": "XML"
 		},
 		"dependencies": {
@@ -56,8 +56,13 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "com.privatetraining.model.xml.i18n.i18n"
+					"bundleName": "com.privatetraining.databinding.i18n.i18n"
 				}
+			},
+			"": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "./data/person.json"
 			}
 		},
 		"resources": {

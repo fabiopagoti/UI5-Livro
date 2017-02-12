@@ -3,7 +3,7 @@ sap.ui.define([
 ], function(Controller) {
 	"use strict";
 
-	return Controller.extend("com.privatetraining.model.xml.controller.S0", {
+	return Controller.extend("com.privatetraining.databinding.controller.S0", {
 
 	});
 });
