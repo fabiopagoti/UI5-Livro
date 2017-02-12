@@ -2,21 +2,25 @@
 	controllerName="com.privatetraining.model.xml.controller.S0" displayBlock="true">
 	<App>
 		<pages>
-			<Page title="Modelo JSON">
+			<Page title="Modelo XML">
 				<content>
 					<form:SimpleForm layout="ResponsiveGridLayout" busy="{view>/busy}">
 						<form:content>
 							<core:Title text="Title"/>
 							<Label text="Nome"/>
-							<Input id="input_a" value="{/first}"/>
+							<Input value="{/name/@first}"/>
 							<Label text="Sobrenome"/>
-							<Input id="input_b" value="{/last}"/>
+							<Input value="{/name/@last}"/>
+							<Label text="Endereço"/>
+							<Input value="{/address/street}"/>
 							<Label text="Nome Completo"/>
-							<Text text="{ path: '/first'} {/last}"/>
-							<Button text="Troca" press="onPress"/>
+							<ComboBox items="{/contact/email}">
+								<items>
+									<core:Item text="{}"  />
+								</items>
+							</ComboBox>
 						</form:content>
 					</form:SimpleForm>
-					<Button text="Muda Busy" press="onMudaBusy"/>
 				</content>
 			</Page>
 		</pages>

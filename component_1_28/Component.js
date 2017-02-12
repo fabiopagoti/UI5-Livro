@@ -15,13 +15,7 @@ sap.ui.define([
 				"libs": ["sap.ui.core", "sap.m", "sap.ui.layout"]
 			},
 			"config": {
-				"i18nBundle": "com.privatetraining.component128.i18n.i18n",
-				"icon": "",
-				"favIcon": "",
-				"phone": "",
-				"phone@2": "",
-				"tablet": "",
-				"tablet@2": ""
+				"i18nBundle": "com.privatetraining.component128.i18n.i18n"
 			}
 		},
 

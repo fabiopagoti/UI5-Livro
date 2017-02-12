@@ -1,11 +1,10 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/json/JSONModel"
-
 ], function(Controller, JSONModel) {
 	"use strict";
 
-	return Controller.extend("com.privatetraining.model.json.controller.S0", {
+	return Controller.extend("com.privatetraining.model.xml.controller.S0", {
 
 		_data: {
 			first: "Fabio",

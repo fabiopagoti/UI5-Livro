@@ -4,6 +4,8 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("com.privatetraining.model.xml.controller.S0", {
-
+		onBeforeRendering: function(oEvent){
+			window.xmlmodel = this.getView().getModel();
+		}
 	});
 });

@@ -1,4 +1,4 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form" controllerName="com.privatetraining.model.json.controller.S0" displayBlock="true">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form" controllerName="com.privatetraining.model.xml.controller.S0" displayBlock="true">
 	<App>
 		<pages>
 			<Page title="Modelo JSON">

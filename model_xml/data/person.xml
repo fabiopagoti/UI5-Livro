@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<person>
+	<name first="Fabio" last="Pagoti"/>
+	<address>
+		<street>Avenida Paulista</street>
+	</address>
+	<contact>
+		<email>fabiopagoti@gmail.com</email>
+		<email>fabiopagoti@abap101.com</email>
+	</contact>
+</person>
