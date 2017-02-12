@@ -1,22 +1,26 @@
 {
   "run": [
     {
-      "filePath": "/model_xml/Component.js",
+      "filePath": "/model_resource/Component.js",
       "previewMode": 1,
       "dataMode": 1,
       "workspace": "withoutWorkspace",
       "ui5ActiveVersion": null,
       "ui5VerSource": null,
       "isDefaultVersion": 0,
-      "urlParameters": [],
+      "urlParameters": [
+        {
+          "paramName": "sap-language",
+          "paramValue": "ES"
+        }
+      ],
       "hashParameter": "",
       "backendSystem": [],
-      "urlParametersNotNeeded": true,
       "_metadata": {
-        "id": 8707766,
+        "id": 9615016,
         "runnerId": "fiorirunner",
-        "displayName": "14b - Modelo XML",
-        "lastRunTimeStamp": 1486882561160
+        "displayName": "14c - Modelo Resource (ES)",
+        "lastRunTimeStamp": 1486887088534
       }
     },
     {
@@ -347,6 +351,48 @@
       }
     },
     {
+      "filePath": "/model_resource/Component.js",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [
+        {
+          "paramName": "sap-language",
+          "paramValue": "PT"
+        }
+      ],
+      "hashParameter": "",
+      "backendSystem": [],
+      "_metadata": {
+        "id": 6653154,
+        "runnerId": "fiorirunner",
+        "displayName": "14c - Modelo Resource (PT)",
+        "lastRunTimeStamp": 1486885306752
+      }
+    },
+    {
+      "filePath": "/model_xml/Component.js",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "urlParametersNotNeeded": true,
+      "_metadata": {
+        "id": 8707766,
+        "runnerId": "fiorirunner",
+        "displayName": "14b - Modelo XML",
+        "lastRunTimeStamp": 1486882561160
+      }
+    },
+    {
       "filePath": "/model_json/Component.js",
       "previewMode": 1,
       "dataMode": 1,
@@ -403,6 +449,29 @@
         "runnerId": "fiorirunner",
         "displayName": "13b - Component (1.30+) - Fiori",
         "lastRunTimeStamp": 1486881022641
+      }
+    },
+    {
+      "filePath": "/model_resource/Component.js",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [
+        {
+          "paramName": "sap-language",
+          "paramValue": "EN"
+        }
+      ],
+      "hashParameter": "",
+      "backendSystem": [],
+      "_metadata": {
+        "id": 717010,
+        "runnerId": "fiorirunner",
+        "displayName": "14c - Modelo Resource (EN)",
+        "lastRunTimeStamp": 0
       }
     }
   ]

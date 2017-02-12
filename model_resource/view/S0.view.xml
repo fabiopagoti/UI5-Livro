@@ -1,0 +1,11 @@
+<mvc:View controllerName="com.privatetraining.translation.controller.S0" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page id="page">
+				<content>
+					<Text text="{i18n>greeting}"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
