@@ -9,6 +9,56 @@
 							<core:Title text="Property Binding"/>
 							<Label text="Nome"/>
 							<Input value="{/name}"/>
+							<Label text="Sobrenome"/>
+							<Input value="{ path: '/last_name' } "/>
+							<Label text="Nome Completo"/>
+							<Text text="{/name} {/last_name}"/>
+							<Label text="Idade"/>
+							<ObjectNumber number="{/age}" unit="{/age_unit}" state="{path: '/age_state', formatter: '.formatAgeState' }"/>
+							<Label text="Idade"/>
+							<ObjectNumber number="{/age}" unit="{/age_unit}" state="{= ( ${/age_state} === '0' ) ? 'Success' : 'Error' }"/>
+							<Label text="Nascimento"/>
+							<DatePicker value="{/birthday}"/>
+							<Label text="Endereço"/>
+							<TextArea value="{/address/street/name}"/>
+							
+							
+							<core:Title text="Aggregation Binding"/>
+							
+							<Label text="Skills"/>
+							<List items="{/skills}" >
+								<StandardListItem title="{}" />
+							</List>
+							
+							<Label text="Idolos"/>
+							<Table items="{/fan_of}"  >
+								<columns>
+									<Column>
+										<header>
+											<Text text="Pessoa" />
+										</header>
+									</Column>
+									<Column>
+										<header>
+											<Text text="Profissão" />
+										</header>
+									</Column>
+
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{name}" />
+											<Input value="{job}" />
+											
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+							
+							
+							
+							
 						</form:content>
 					</form:SimpleForm>
 				</content>

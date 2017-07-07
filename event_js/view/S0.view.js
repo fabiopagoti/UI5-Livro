@@ -30,7 +30,12 @@ sap.ui.jsview("view.S0", {
 							new sap.m.Button({
 								text:"Show Message Box",
 								press: oController.onPressMessageBox
+							}),
+							new sap.m.Button(this.createId("but"), {
+								text:"Outro botão bacana"
+								// press: oController.onPressMessageBox.bind(oController)
 							})
+							
 						]
 						
 					})

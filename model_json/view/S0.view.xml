@@ -1,5 +1,4 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form"
-	controllerName="com.privatetraining.model.xml.controller.S0" displayBlock="true">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form" controllerName="com.privatetraining.model.xml.controller.S0" displayBlock="true">
 	<App>
 		<pages>
 			<Page title="Modelo JSON">
@@ -10,13 +9,21 @@
 							<Label text="Nome"/>
 							<Input id="input_a" value="{/first}"/>
 							<Label text="Sobrenome"/>
-							<Input id="input_b" value="{/last}"/>
+							<Input id="input_b" value="{/last}" enabled="{/taBloqueado}"/>
 							<Label text="Nome Completo"/>
 							<Text text="{ path: '/first'} {/last}"/>
 							<Button text="Troca" press="onPress"/>
 						</form:content>
 					</form:SimpleForm>
+					<List noDataText="Drop list items here" id="__list0" busy="{view>/busy}">
+					    <items>
+					        <StandardListItem type="Navigation" title="List Item 1" description="Description text" icon="sap-icon://picture" id="__item0"/>
+					        <StandardListItem type="Navigation" title="List Item 2" description="Description text" icon="sap-icon://picture" id="__item1"/>
+					        <StandardListItem type="Navigation" title="List Item 3" description="Description text" icon="sap-icon://picture" id="__item2"/></items>
+					</List>
+					<Slider id="__slider0" busy="{view>/busy}"/>
 					<Button text="Muda Busy" press="onMudaBusy"/>
+					<StandardTile title="Title" info="Info" icon="sap-icon://customer" activeIcon="sap-icon://customer" number="123" numberUnit="eur" infoState="Success" id="__tile0" busy="{view>/busy}"/>
 				</content>
 			</Page>
 		</pages>

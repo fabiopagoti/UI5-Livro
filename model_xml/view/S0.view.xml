@@ -16,7 +16,7 @@
 							<Label text="Nome Completo"/>
 							<ComboBox items="{/contact/email}">
 								<items>
-									<core:Item text="{}"  />
+									<core:Item text="{@href}"  />
 								</items>
 							</ComboBox>
 						</form:content>

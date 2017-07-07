@@ -5,7 +5,8 @@
 		<street>Avenida Paulista</street>
 	</address>
 	<contact>
-		<email>fabiopagoti@gmail.com</email>
-		<email>fabiopagoti@abap101.com</email>
+		<email href="fabiopagoti@gmail.com"></email>
+		<email href="fabiopagoti@xpto.com"></email>
+		<email href="fabiopagoti@abap101.com"></email>
 	</contact>
 </person>

@@ -8,11 +8,12 @@ sap.ui.define([
 
 		_data: {
 			first: "Fabio",
-			last: "Pagoti"
+			last: "Pagoti",
+			taBloqueado: false
 		},
 
 		_viewModel: {
-			busy: false
+			busy: true
 		},
 
 		onInit: function() {
@@ -33,6 +34,12 @@ sap.ui.define([
 			this.byId("input_b").bindProperty("value", {
 				path: '/first'
 			});
+			
+			this.byId("input_b").bindProperty("tooltip", {
+				path: '/first'
+			});
+			
+			
 
 		},
 

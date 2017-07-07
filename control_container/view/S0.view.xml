@@ -1,23 +1,14 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout" xmlns="sap.m"
+<mvc:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:form="sap.ui.layout.form" 
+	xmlns:layout="sap.ui.layout" 
+	xmlns="sap.m"
 	controllerName="controller.S0">
-	<SplitApp>
+	<SplitApp mode="PopoverMode">
 		<masterPages>
 			<Page title="Ordens (2)">
 				<content>
 					<List>
-						<items>
-							<ObjectListItem type="Active" title="Cliente A" number="4214" numberUnit="eur" intro="4501" selected="true" numberState="Success">
-								<attributes>
-									<ObjectAttribute text="Realizado" title="Pagamento"/>
-								</attributes>
-							</ObjectListItem>
-							<ObjectListItem type="Active" title="Cliente B" number="5030,49" numberUnit="usd" intro="4502" markFlagged="true" showMarkers="true"
-								numberState="Warning">
-								<attributes>
-									<ObjectAttribute text="Pendente" title="Pagamento"/>
-								</attributes>
-							</ObjectListItem>
-						</items>
 						<headerToolbar>
 							<Toolbar >
 								<content>
@@ -25,6 +16,36 @@
 								</content>
 							</Toolbar>
 						</headerToolbar>
+						<items>
+							<ObjectListItem 
+								type="Active" 
+								title="Cliente A"
+								number="4214" 
+								numberUnit="eur" 
+								intro="4501" 
+								selected="true" 
+								numberState="Success">
+								<attributes>
+									<ObjectAttribute 
+									text="Realizado" 
+									title="Pagamento"/>
+								</attributes>
+							</ObjectListItem>
+							<ObjectListItem 
+								type="Active" 
+								title="Cliente B" 
+								number="5030,49" 
+								numberUnit="usd" 
+								intro="4502" 
+								markFlagged="true" 
+								
+								showMarkers="true"
+								numberState="Warning">
+								<attributes>
+									<ObjectAttribute text="Pendente" title="Pagamento"/>
+								</attributes>
+							</ObjectListItem>
+						</items>
 					</List>
 				</content>
 				<footer>
@@ -46,7 +67,13 @@
 								<content>
 									<form:Form >
 										<form:layout>
-											<form:ResponsiveGridLayout labelSpanL="2" labelSpanM="2" emptySpanL="2" emptySpanM="1" columnsL="2" columnsM="1"/>
+											<form:ResponsiveGridLayout 
+												labelSpanL="2" 
+												labelSpanM="3" 
+												emptySpanL="2" 
+												emptySpanM="1" 
+												columnsL="2" 
+												columnsM="1"/>
 										</form:layout>
 										<form:formContainers>
 											<form:FormContainer title="Title">
@@ -60,12 +87,12 @@
 														<form:fields>
 															<Input>
 																<layoutData>
-																	<layout:GridData span="L4 M2 S4"/>
+																	<layout:GridData span="L4 M5 S4"/>
 																</layoutData>
 															</Input>
 															<Input>
 																<layoutData>
-																	<layout:GridData span="L4 M2 S4"/>
+																	<layout:GridData span="L4 M3 S4"/>
 																</layoutData>
 															</Input>
 														</form:fields>
@@ -88,6 +115,7 @@
 									</form:Form>
 								</content>
 							</IconTabFilter>
+							<IconTabSeparator />
 							<IconTabFilter text="Itens" count="10" icon="sap-icon://task" iconColor="Critical">
 								<content>
 									<List>

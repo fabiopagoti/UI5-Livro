@@ -28,7 +28,7 @@
 					</List>
 				</semantic:content>
 				<semantic:filter>
-					<semantic:FilterAction/>
+					<semantic:FilterAction  />
 				</semantic:filter>
 				<semantic:group>
 					<semantic:GroupAction/>
@@ -110,9 +110,6 @@
 				<semantic:positiveAction>
 					<semantic:PositiveAction text="Positive" press="onSemanticButtonPress"/>
 				</semantic:positiveAction>
-				<semantic:negativeAction>
-					<semantic:NegativeAction text="Negative" press="onSemanticButtonPress"/>
-				</semantic:negativeAction>
 				<semantic:forwardAction>
 					<semantic:ForwardAction press="onSemanticButtonPress"/>
 				</semantic:forwardAction>
@@ -131,12 +128,13 @@
 				<semantic:discussInJamAction>
 					<semantic:DiscussInJamAction press="onSemanticButtonPress"/>
 				</semantic:discussInJamAction>
-				<semantic:shareInJamAction>
-					<semantic:ShareInJamAction press="onSemanticButtonPress"/>
-				</semantic:shareInJamAction>
+	
 				<semantic:printAction>
 					<semantic:PrintAction press="onSemanticButtonPress"/>
 				</semantic:printAction>
+				<semantic:negativeAction>
+					<semantic:NegativeAction text="Negative" press="onSemanticButtonPress"/>
+				</semantic:negativeAction>
 				<semantic:messagesIndicator>
 					<semantic:MessagesIndicator press="onMessagesButtonPress"/>
 				</semantic:messagesIndicator>
@@ -147,10 +145,7 @@
 					<OverflowToolbarButton icon="sap-icon://settings" text="Settings" press="onPress"/>
 					<OverflowToolbarButton icon="sap-icon://video" text="Video" press="onPress"/>
 				</semantic:customFooterContent>
-				<semantic:customShareMenuContent>
-					<Button text="CustomShareBtn1" icon="sap-icon://color-fill" press="onPress"/>
-					<Button text="CustomShareBtn2" icon="sap-icon://crop" press="onPress"/>
-				</semantic:customShareMenuContent>
+				
 			</semantic:DetailPage>
 		</detailPages>
 	</SplitApp>

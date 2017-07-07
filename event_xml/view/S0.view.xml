@@ -7,7 +7,7 @@
 					<Input id="input_name" placeholder="Nome Completo" type="Text"/>
 				</semantic:content>
 				<semantic:saveAction>
-					<semantic:SaveAction press="onSave"/>
+					<semantic:SaveAction press=".helper.onSave"/>
 				</semantic:saveAction>
 			</semantic:FullscreenPage>
 		</pages>

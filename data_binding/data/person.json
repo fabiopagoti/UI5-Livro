@@ -2,6 +2,8 @@
 	"name": "Fabio",
 	"last_name": "Pagoti",
 	"age": 27,
+	"age_unit": "anos",
+	"age_state": "0",
 	"birthday": "19890727",
 	"grade": "7.2375",
 	"address": {
